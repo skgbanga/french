@@ -1,29 +1,15 @@
 #!/usr/bin/python3
 
-import time
 from random import choice
 from collections import deque
-from functools import wraps
 
+from common import timer
 from data import verbs, pronouns, dictionary, vowels
 
 
 def toss():
     options = [0] * 3 + [1] * 7
     return choice(options)
-
-
-def timer(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        start = time.time()
-        func(*args, **kwargs)
-        taken = time.time() - start
-        print('Time taken: {:0.2f}'.format(taken))
-
-        return taken
-
-    return wrapper
 
 
 @timer

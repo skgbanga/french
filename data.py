@@ -57,34 +57,13 @@ nogender_nouns = [
     'collegue',
 ]
 
-male_possessives = [
-        'mon',
-        'son'
-        ]
-
-female_possessives = [
-        'ma',
-        'sa'
-        ]
-
-nogender_possessives = [
-        'votre',
-        'notre',
-        'leur',
-        'ses',
-        'mes',
-        'leurs',
-        'nos',
-        'vos'
-        ]
-
-english_possessives = [
-        'my',
-        'our',
-        'his',
-        'her',
-        'their',
-        'your'
+possessives = [
+        ('my', 'mon', 'ma', 'mes'),
+        ('our', 'notre', 'notre', 'nos'),
+        ('his', 'son', 'sa', 'ses'),
+        ('her', 'son', 'sa', 'ses'),
+        ('their', 'leur', 'leur', 'leurs'),
+        ('your', 'votre', 'votre', 'vos'),
         ]
 
 verbs = [
