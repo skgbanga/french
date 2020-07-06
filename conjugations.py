@@ -4,11 +4,13 @@ from random import choice
 from collections import deque
 
 from common import timer
-from data import verbs, pronouns, dictionary, vowels
+from data import (regular_verbs, irregular_verbs,
+                  pronouns, dictionary, vowels)
 
 
 def toss():
-    options = [0] * 3 + [1] * 7
+    ''' biased towards 1'''
+    options = [0] * 2 + [1] * 8
     return choice(options)
 
 
@@ -44,6 +46,13 @@ def answer(pronoun, verb):
     return pronoun[0] + ' ' + conjugation
 
 
+def select_verb():
+    r = toss()
+    if r == 0:
+        return choice(regular_verbs)
+
+    return choice(irregular_verbs)
+
 def main():
     lasts = deque(maxlen=5)
     chances = 10
@@ -52,7 +61,8 @@ def main():
     attempts = 0
     while attempts < chances:
         pronoun = choice(pronouns)
-        verb = choice(verbs)
+        verb = select_verb()
+
         try:
             right = answer(pronoun, verb)
         except KeyError:

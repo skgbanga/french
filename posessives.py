@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from random import choice
 from data import male_nouns, female_nouns, possessives
 

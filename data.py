@@ -3,6 +3,7 @@ male_nouns = [
     ('jus', 'juice'),
     ('passeport', 'passport'),
     ('cafe', 'coffee'),
+    ('cafe', 'coffee shop'),
     ('the', 'tea'),
     ('lait', 'milk'),
     ('sucre', 'sugar'),
@@ -27,9 +28,35 @@ male_nouns = [
     ('nom', 'name'),
     ('prenom', 'first name'),
     ('vin', 'wine'),
-    ('soir', 'evening'),
     ('portable', 'cellphone'),
-    ('internet', 'internet')
+    ('internet', 'internet'),
+    ('dentifrice', 'toothpaste'),
+    ('shampooing', 'shampoo'),
+    ('savon', 'soap'),
+    ('centre', 'center'),
+    ('glacon', 'ice cube'),
+    ('euro', 'euro'),
+    ('travail', 'work'),
+    ('argent', 'money'),
+    ('numero', 'number'),
+    ('arret', 'stop'),
+    ('taxi', 'taxi'),
+    ('metro', 'metro'),
+    ('bus', 'bus'),
+    ('train', 'train'),
+    ('avion', 'plane'),
+    ('billet', 'ticket'),
+    ('ticket', 'ticket'),
+    ('aeroport', 'airport'),
+    ('matin', 'morning'),
+    ('apres-midi', 'afternoon'),
+    ('soir', 'evening'),
+    ('marche', 'market'),
+    ('supermarche', 'supermarket'),
+    ('theatre', 'theater'),
+    ('cinema', 'cinema'),
+    ('parc', 'park'),
+    ('recu', 'receipt')
 ]
 
 female_nouns = [
@@ -49,7 +76,27 @@ female_nouns = [
     ('maison', 'house'),
     ('biere', 'beer'),
     ('eau', 'water'),
-    ('puce', 'chip')
+    ('puce', 'chip'),
+    ('patisserie', 'pastry'),
+    ('patisserie', 'pastry shop'),
+    ('creme', 'cream'),
+    ('brosse', 'brush'),
+    ('dent', 'tooth'),
+    ('pharmacie', 'pharmacy'),
+    ('personne', 'person'),
+    ('vacance', 'holiday'),
+    ('langue', 'language'),
+    ('banque', 'bank'),
+    ('heure', 'hour'),
+    ('ligne', 'line'),
+    ('station', 'station'),
+    ('gare', 'train station'),
+    ('place', 'plaza'),
+    ('voiture', 'car'),
+    ('avenue', 'avenue'),
+    ('rue', 'street'),
+    ('entree', 'entrance'),
+    ('sortie', 'exit')
 ]
 
 nogender_nouns = [
@@ -65,22 +112,35 @@ possessives = [
         ('their', 'leur', 'leur', 'leurs'),
         ('your', 'votre', 'votre', 'vos'),
         ]
+vowels = ['a', 'e', 'i', 'o', 'u']
 
-verbs = [
+irregular_verbs = [
     ('etre', 'to be'),
     ('avoir', 'to have'),
     ('vouloire', 'to want'),
+    ('pouvoir', 'to be able to/can'),
     ('aller', 'to go'),
-    ('manger', 'to eat'),
+    ('venir', 'to come'),
     ('boire', 'to drink'),
-    ('payer', 'to pay'),
     ('voir', 'to see'),
     ('savoir', 'to know'),
-    ('payer', 'to pay'),
     ('comprendre', 'to understand'),
-    ('acheter', 'to buy')
+    ('partir', 'to leave'),
 ]
 
+regular_verbs = [
+    ('changer', 'to change', 'chang'),
+    ('voyager', 'to travel', 'voyag'),
+    ('manger', 'to eat', 'mang'),
+    ('acheter', 'to buy', 'achet'),
+    ('parler', 'to talk', 'parl'),
+    ('regarder', 'to watch', 'regard'),
+    ('donner', 'to give', 'donn'),
+    ('retirer', 'to withdraw', 'retir'),
+    ('payer', 'to pay', 'pay'),
+    ('arriver', 'to arrive', 'arriv'),
+    ('repeter', 'to repeat', 'repet')
+]
 
 pronouns = [
     ('je', 'i'),
@@ -115,39 +175,73 @@ dictionary = {
         'ils': 'ont',
         'elles': 'ont',
     },
-    'vouloire': {
-        'je': 'veux',
-        'nous': 'voulons',
-        'vous': 'voulez',
-        'tu': 'veux',
-        'il': 'veut',
-        'elle': 'veut',
-        'ils': 'veulent',
-        'elles': 'veulent',
-    },
     'aller': {
-        'je': 'vais',
-        'nous': 'allons',
-        'vous': 'allez',
-        'tu': 'vas',
-        'il': 'va',
-        'elle': 'va',
-        'ils': 'vont',
+        'je':    'vais',
+        'tu':    'vas',
+        'nous':  'allons',
+        'vous':  'allez',
+        'il':    'va',
+        'elle':  'va',
+        'ils':   'vont',
         'elles': 'vont',
     },
+    'vouloir': {
+        'je':    'veux',
+        'tu':    'veux',
+        'nous':  'voulons',
+        'vous':  'voulez',
+        'il':    'veut',
+        'elle':  'veut',
+        'ils':   'veulent',
+        'elles': 'veulent',
+    },
+    'pouvoir': {
+        'je':     'peux',
+        'tu':     'peux',
+        'nous':   'pouvons',
+        'vous':   'pouvez',
+        'il' :    'peut',
+        'elle' :  'peut',
+        'ils' :   'peuvent',
+        'elles' : 'peuvent',
+    },
     'savoir': {
-        'je': 'sais',
-        'tu': 'sais',
-        'nous': 'savons',
-        'vous': 'savez',
-        'il' : 'sait',
-        'elle' : 'sait',
-        'ils' : 'savent',
+        'je':     'sais',
+        'tu':     'sais',
+        'nous':   'savons',
+        'vous':   'savez',
+        'il' :    'sait',
+        'elle' :  'sait',
+        'ils' :   'savent',
         'elles' : 'savent',
         },
     'comprendre': {
-        'je' : 'comprends'
-        }
+        'je' :    'comprends',
+        'tu':     'comprends',
+        'vous':   'comprendez',
+        'nous':   'comprendons',
+        'il':     'comprend',
+        'elle':   'comprend',
+        'ils' :   'comprendent',
+        'elles' : 'comprendent'
+        },
 }
 
-vowels = ['a', 'e', 'i', 'o', 'u']
+for verb in regular_verbs:
+    suffix = verb[2]
+
+    ons = 'ons'
+    if suffix[-1] == 'g':
+        ons = 'eons'
+
+    d = {
+        'je':    suffix + 'e',
+        'tu':    suffix + 'es',
+        'il':    suffix + 'e',
+        'elle':  suffix + 'e',
+        'nous':  suffix + ons,
+        'vous':  suffix + 'ez',
+        'ils':   suffix + 'ent',
+        'elles': suffix + 'ent'
+    }
+    dictionary[verb[0]] = d
