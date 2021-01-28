@@ -20,7 +20,8 @@ def main():
             noun = choice(female_nouns)
 
 
-        plural = toss()
+        # plural = toss()
+        plural = 0
         if plural == 1:
             show_noun = noun[1] + 's'
             answer_noun = noun[0] + 's'

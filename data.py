@@ -56,7 +56,22 @@ male_nouns = [
     ('theatre', 'theater'),
     ('cinema', 'cinema'),
     ('parc', 'park'),
-    ('recu', 'receipt')
+    ('recu', 'receipt'),
+    ('feu', 'fire'),
+    ('feu', 'traffic light'),
+    ('ordinateur', 'computer'),
+    ('ordinateur portable', 'laptop'),
+    ('besoin', 'need'),
+    ('cadeau', 'gift'),
+    ('chapeau', 'hat'),
+    ('tableau', 'painting'),
+    ('vetement', 'garment'),
+    ('parfum', 'perfume'),
+    ('poulet', 'chicken'),
+    ('saucisson', 'salami'),
+    ('verre', 'glass'),
+    ('stade', 'stadium'),
+    ('mois', 'month')
 ]
 
 female_nouns = [
@@ -96,8 +111,22 @@ female_nouns = [
     ('avenue', 'avenue'),
     ('rue', 'street'),
     ('entree', 'entrance'),
-    ('sortie', 'exit')
+    ('sortie', 'exit'),
+    ('intersection', 'intersection'),
+    ('chaussure', 'shoe'),
+    ('salade', 'salad'),
+    ('pizza', 'pizza'),
+    ('chose', 'thing')
 ]
+
+adjectives = [
+        ('nouveau', 'nouvelle', 'nouvel'),
+        ('beau', 'belle', 'bel'),
+        ('petit', 'petite'),
+        ('grand', 'grande'),
+        ('bon', 'bonne'),
+        ('dernier', 'derniere')
+        ]
 
 nogender_nouns = [
     'chef',
@@ -139,7 +168,10 @@ regular_verbs = [
     ('retirer', 'to withdraw', 'retir'),
     ('payer', 'to pay', 'pay'),
     ('arriver', 'to arrive', 'arriv'),
-    ('repeter', 'to repeat', 'repet')
+    ('repeter', 'to repeat', 'repet'),
+    ('rester', 'to stay', 'rest'),
+    ('tourner', 'to turn', 'tourn'),
+    ('chercher', 'to look for', 'cherch')
 ]
 
 pronouns = [
